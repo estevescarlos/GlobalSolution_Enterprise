@@ -1,0 +1,60 @@
+package br.com.itProdigium.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TB_ENDERECO")
+@SequenceGenerator(allocationSize = 1, initialValue = 1, name = "endereco", sequenceName = "SQ_TB_ENDERECO")
+public class Endereco {
+
+	@Id
+	@Column(name = "cd_endereco", nullable = false)
+	private int id;
+	private String estado;
+	private String cidade;
+	private String logradouro;
+
+	public Endereco(String estado, String cidade, String logradouro) {
+		super();
+		this.estado = estado;
+		this.cidade = cidade;
+		this.logradouro = logradouro;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+}

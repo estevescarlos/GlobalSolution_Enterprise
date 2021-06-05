@@ -1,0 +1,8 @@
+package br.com.itProdigium.singleton;
+
+import br.com.itProdigium.dao.GenericDao;
+import br.com.itProdigium.entity.Categoria;
+
+public interface CategoriaDao extends GenericDao<Categoria, Integer>{
+
+}

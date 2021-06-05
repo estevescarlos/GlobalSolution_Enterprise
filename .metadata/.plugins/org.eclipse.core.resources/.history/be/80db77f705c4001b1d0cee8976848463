@@ -1,0 +1,9 @@
+package br.com.itProdigium.entity;
+
+public class Endereco {
+	
+	private int id;
+	private String estado;
+	private String cidade;
+	private String logradouro;
+}

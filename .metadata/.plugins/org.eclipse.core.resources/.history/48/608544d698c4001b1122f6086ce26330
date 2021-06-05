@@ -1,0 +1,69 @@
+package br.com.itProdigium.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TB_ENDERECO")
+@SequenceGenerator(allocationSize = 1, initialValue = 1, name = "endereco", sequenceName = "SQ_TB_ENDERECO")
+public class Endereco {
+
+	@Id
+	@Column(name = "cd_endereco", nullable = false)
+	@GeneratedValue(generator = "endereco", strategy = GenerationType.SEQUENCE)
+	private int id;
+	
+	@Column(name = "nm_estado", nullable = false)
+	private Estados estado;
+	
+	@Column(name = "nm_cidade", nullable = false)
+	private String cidade;
+	
+	@Column(name = "ds_logradouro", nullable = false)
+	private String logradouro;
+
+	public Endereco(Estados estado, String cidade, String logradouro) {
+		super();
+		this.estado = estado;
+		this.cidade = cidade;
+		this.logradouro = logradouro;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+}

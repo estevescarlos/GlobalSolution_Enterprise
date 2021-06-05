@@ -1,0 +1,135 @@
+package br.com.itProdigium.entity;
+
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name = "T_GS_SATISFACAO")
+@SequenceGenerator(name = "pesquisa", allocationSize = 1, sequenceName = "SQ_T_GS_SATISFACAO")
+public class PesquisaSatisfacao {
+
+	@Id
+	@Column(name = "cd_satisfacao", nullable = false)
+	@GeneratedValue(generator = "pesquisa", strategy = GenerationType.SEQUENCE)
+	private int id;
+	
+	
+	
+	@Column(name = "nr_nota", nullable = false, length = 1)
+	private int notaAvalicao;
+	
+	@Column(name = "ds_tipo", nullable = false, length = 50)
+	private Tipo tipo;
+	
+	@Column(name = "ds_companhia", nullable = false)
+	private Companhia companhia;
+	
+	@Column(name = "ds_comentario", nullable = false)
+	private String comentario;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "dt_pesquisa", nullable = false)
+	private Calendar dtPesquisa;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "dt_cadastro", nullable = false)
+	private Calendar dtCadastro;
+
+	public PesquisaSatisfacao() {
+	}
+
+	public PesquisaSatisfacao(String nome, PontosTuristicos pontoTuristico, int notaAvalicao, Tipo tipo,
+			Companhia comQuemIr, String comentario, Calendar dtPesquisa, Calendar dtSistema) {
+		super();
+		this.nome = nome;
+		this.pontoTuristico = pontoTuristico;
+		this.notaAvalicao = notaAvalicao;
+		this.tipo = tipo;
+		this.companhia = comQuemIr;
+		this.comentario = comentario;
+		this.dtPesquisa = dtPesquisa;
+		this.dtCadastro = dtSistema;
+	}
+
+	public Tipo getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+
+	public Companhia getComQuemIr() {
+		return companhia;
+	}
+
+	public void setComQuemIr(Companhia comQuemIr) {
+		this.companhia = comQuemIr;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public PontosTuristicos getPontoTuristico() {
+		return pontoTuristico;
+	}
+
+	public void setPontoTuristico(PontosTuristicos pontoTuristico) {
+		this.pontoTuristico = pontoTuristico;
+	}
+
+	public int getNotaAvalicao() {
+		return notaAvalicao;
+	}
+
+	public void setNotaAvalicao(int notaAvalicao) {
+		this.notaAvalicao = notaAvalicao;
+	}
+
+	public String getComentario() {
+		return comentario;
+	}
+
+	public void setComentario(String comentario) {
+		this.comentario = comentario;
+	}
+
+	public Calendar getDtPesquisa() {
+		return dtPesquisa;
+	}
+
+	public void setDtPesquisa(Calendar dtPesquisa) {
+		this.dtPesquisa = dtPesquisa;
+	}
+
+	public Calendar getDtSistema() {
+		return dtCadastro;
+	}
+
+	public void setDtSistema(Calendar dtSistema) {
+		this.dtCadastro = dtSistema;
+	}
+
+}

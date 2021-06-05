@@ -1,0 +1,8 @@
+package br.com.itProdigium.singleton;
+
+import br.com.itProdigium.dao.GenericDao;
+import br.com.itProdigium.entity.PontosTuristicos;
+
+public interface PontosTuristicosDao extends GenericDao<PontosTuristicos, Integer>{
+
+}

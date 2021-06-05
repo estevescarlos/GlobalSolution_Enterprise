@@ -1,0 +1,25 @@
+package br.com.itProdigium.entity;
+
+public enum Estados {
+	
+	ACRE, ALAGOAS, AMAPA, AMAZONAS,	BAHIA, CEATA, DISTRITO_FEDERAL,	ESPIRITO_SANTO,
+	GOIAS,
+	MARANHAO,
+	MATO_GROSSO,
+	MATO_GROSSO_DO_SUL,
+	MINAS_GERAIS,
+	PARA,
+	PARAIBA,
+	PARANA,
+	Pernambuco (PE) – Recife,
+	Piauí (PI) – Teresina,
+	Rio de Janeiro (RJ) – Rio de Janeiro,
+	Rio Grande do Norte (RN) – Natal,
+	Rio Grande do Sul (RS) – Porto Alegre,
+	Rondônia (RO) – Porto Velho,
+	Roraima (RR) – Boa Vista,
+	Santa Catarina (SC) – Florianópolis,
+	São Paulo (SP) – São Paulo,
+	Sergipe (SE) – Aracaju,
+	Tocantins (TO) – Palmas.
+}

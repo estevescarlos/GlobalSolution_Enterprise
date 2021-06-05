@@ -1,0 +1,42 @@
+package br.com.itProdigium.entity;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "T_GS_STATUS")
+@SequenceGenerator(name = "status", allocationSize = 1, sequenceName = "SQ_T_GS_STATUS")
+public class Status {
+
+	@Id
+	@Column(name = "cd_status", nullable = false)
+	@GeneratedValue(generator = "status", strategy = GenerationType.SEQUENCE)
+	private int id;
+	
+	@Column(name = "nm_status", nullable = false, length = 30)
+	private String nome;
+	
+	@OneToMany
+	private List<PontosTuristicos> pontoTuristico;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+}
