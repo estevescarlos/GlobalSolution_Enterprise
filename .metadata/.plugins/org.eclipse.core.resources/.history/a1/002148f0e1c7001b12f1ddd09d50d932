@@ -1,0 +1,57 @@
+package br.com.itProdigium.view;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.persistence.EntityManager;
+
+import br.com.itProdigium.dao.PesquisaSatisfacaoDao;
+import br.com.itProdigium.dao.UsuarioDao;
+import br.com.itProdigium.dao.impl.PesquisaSatisdacaoDaoImpl;
+import br.com.itProdigium.dao.impl.UsuarioDaoImpl;
+import br.com.itProdigium.entity.Categoria;
+import br.com.itProdigium.entity.Companhia;
+import br.com.itProdigium.entity.Endereco;
+import br.com.itProdigium.entity.EscalaPreco;
+import br.com.itProdigium.entity.Estados;
+import br.com.itProdigium.entity.PesquisaSatisfacao;
+import br.com.itProdigium.entity.PontosTuristicos;
+import br.com.itProdigium.entity.SiglaEstados;
+import br.com.itProdigium.entity.Status;
+import br.com.itProdigium.entity.Tipo;
+import br.com.itProdigium.entity.Usuario;
+import br.com.itProdigium.exception.CommitException;
+import br.com.itProdigium.singleton.EntityManagerFactorySingleton;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		EntityManager em = EntityManagerFactorySingleton.getInstance().createEntityManager();
+
+		UsuarioDao userDao = new UsuarioDaoImpl(em);
+		PesquisaSatisfacaoDao pesquisaDao = new PesquisaSatisdacaoDaoImpl(em);
+		
+		Usuario user = new Usuario("Carlos", "carlos@fiap.com.br", "abc123");
+		
+		Status status = new Status("Aberto");
+		
+		Categoria categoria = new Categoria("Parque");
+		
+		Endereco endereco = new Endereco(Estados.ACRE, SiglaEstados.AC, "Rio Branco", "Rua Dr Muniz");
+		
+		PontosTuristicos pontoTuristico = new PontosTuristicos(user, endereco, categoria, status, "Estatua Rio Branco", "651651", "165655", EscalaPreco.FREE, Tipo.EDUCACIONAL, Companhia.FAMILIA, new GregorianCalendar(2021, Calendar.JUNE, 07));
+		
+		PesquisaSatisfacao pesquisaSatisfacao = new PesquisaSatisfacao(user, pontoTuristico, 5, Tipo.EDUCACIONAL, Companhia.FAMILIA, "Muito bom!", new GregorianCalendar(2021, Calendar.JUNE, 05), new GregorianCalendar(2021, Calendar.JUNE, 07));
+		
+		try {
+			userDao.create(user);
+			userDao.commit();
+			System.out.println("Cadastrado com sucesso!");
+		} catch (CommitException e) {
+			System.out.println(e.getMessage());
+		}
+	
+		em.close();
+		EntityManagerFactorySingleton.getInstance().close();
+	}
+}

@@ -27,6 +27,15 @@ public class Status {
 	@OneToMany(mappedBy = "status")
 	private List<PontosTuristicos> pontoTuristico;
 
+	public Status() {
+		super();
+	}
+
+	public Status(String nome) {
+		super();
+		this.nome = nome;
+	}
+
 	public int getId() {
 		return id;
 	}

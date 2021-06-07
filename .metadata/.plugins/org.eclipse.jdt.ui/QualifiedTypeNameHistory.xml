@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.CreationTimestamp"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.GeneratorType"/>
     <fullyQualifiedTypeName name="javax.persistence.Temporal"/>
     <fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
-    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Status"/>
-    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Endereco"/>
     <fullyQualifiedTypeName name="br.com.itProdigium.dao.GenericDao"/>
-    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Categoria"/>
     <fullyQualifiedTypeName name="br.com.itProdigium.dao.CategoriaDao"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
@@ -20,14 +16,34 @@
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="br.com.itProdigium.entity.Usuario"/>
-    <fullyQualifiedTypeName name="br.com.itProdigium.dao.UsuarioDao"/>
-    <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
-    <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="br.com.itProdigium.entity.PontosTuristicos"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="br.com.itProdigium.entity.PesquisaSatisfacao"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.dao.UsuarioDao"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.dao.impl.UsuarioDaoImpl"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.singleton.EntityManagerFactorySingleton"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.dao.EnderecoDao"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.dao.impl.PontosTuristicosDaoImpl"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.dao.PontosTuristicosDao"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.dao.StatusDao"/>
+    <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
+    <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Status"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Categoria"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Endereco"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Estados"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.SiglaEstados"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.PontosTuristicos"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.EscalaPreco"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Tipo"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.PesquisaSatisfacao"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.entity.Companhia"/>
+    <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+    <fullyQualifiedTypeName name="br.com.itProdigium.dao.PesquisaSatisfacaoDao"/>
 </qualifiedTypeNameHistroy>

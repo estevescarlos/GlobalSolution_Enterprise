@@ -20,7 +20,7 @@ public class EntityManagerFactorySingleton {
 
 //		Validar se existe a fabrica
 		if (fabrica == null) {
-			fabrica = Persistence.createEntityManagerFactory("oracle");
+			fabrica = Persistence.createEntityManagerFactory("hsql");
 		}
 		return fabrica;
 	}

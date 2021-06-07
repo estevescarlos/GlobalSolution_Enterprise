@@ -60,11 +60,15 @@ public class PontosTuristicos {
 	@Enumerated(EnumType.STRING)
 	private EscalaPreco escalaPreco;
 
+	// TESTE
 	@Column(name = "ds_tipo", nullable = false, length = 100)
-	private List<Tipo> tipo;
+	@Enumerated(EnumType.STRING)
+	private Tipo tipo;
 
+	// TESTE
 	@Column(name = "ds_companhia", nullable = false, length = 100)
-	private List<Companhia> companhia;
+	@Enumerated(EnumType.STRING)
+	private Companhia companhia;
 
 	@CreationTimestamp
 	@Temporal(TemporalType.DATE)
@@ -74,7 +78,7 @@ public class PontosTuristicos {
 	@Temporal(TemporalType.DATE)
 	@Column(name = "dt_atualizao")
 	private Calendar dtAtualizacao;
-	
+
 	@OneToMany(mappedBy = "pontosTuristicos")
 	private List<PesquisaSatisfacao> pesquisaSatisfacao;
 
@@ -82,8 +86,8 @@ public class PontosTuristicos {
 	}
 
 	public PontosTuristicos(Usuario usuario, Endereco endereco, Categoria categoria, Status status, String nome,
-			String latitude, String longitude, EscalaPreco escalaPreco, List<Tipo> tipo, List<Companhia> companhia,
-			Calendar dtCriacao, Calendar dtAtualizacao) {
+			String latitude, String longitude, EscalaPreco escalaPreco, Tipo tipo, Companhia companhia,
+			Calendar dtAtualizacao) {
 		this.usuario = usuario;
 		this.endereco = endereco;
 		this.categoria = categoria;
@@ -94,7 +98,6 @@ public class PontosTuristicos {
 		this.escalaPreco = escalaPreco;
 		this.tipo = tipo;
 		this.companhia = companhia;
-		this.dtCriacao = dtCriacao;
 		this.dtAtualizacao = dtAtualizacao;
 	}
 
@@ -170,22 +173,6 @@ public class PontosTuristicos {
 		this.escalaPreco = escalaPreco;
 	}
 
-	public List<Tipo> getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(List<Tipo> tipo) {
-		this.tipo = tipo;
-	}
-
-	public List<Companhia> getCompanhia() {
-		return companhia;
-	}
-
-	public void setCompanhia(List<Companhia> companhia) {
-		this.companhia = companhia;
-	}
-
 	public Calendar getDtCriacao() {
 		return dtCriacao;
 	}
@@ -208,6 +195,22 @@ public class PontosTuristicos {
 
 	public void setPesquisaSatisfacao(List<PesquisaSatisfacao> pesquisaSatisfacao) {
 		this.pesquisaSatisfacao = pesquisaSatisfacao;
+	}
+
+	public Tipo getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+
+	public Companhia getCompanhia() {
+		return companhia;
+	}
+
+	public void setCompanhia(Companhia companhia) {
+		this.companhia = companhia;
 	}
 
 }
