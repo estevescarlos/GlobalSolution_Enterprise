@@ -10,7 +10,7 @@ import br.com.itProdigium.exception.EntityNotFoundException;
 
 public abstract class GenericDaoImpl<E, K> implements GenericDao<E, K> {
 
-	private EntityManager em;
+	protected EntityManager em;
 
 	private Class<E> clazz; // Atributo que armazena o .class da Entidade
 

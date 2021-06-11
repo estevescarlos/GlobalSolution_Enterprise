@@ -1,0 +1,30 @@
+package br.com.itProdigium.dao.impl;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import br.com.itProdigium.dao.UsuarioDao;
+import br.com.itProdigium.entity.PontosTuristicos;
+import br.com.itProdigium.entity.Usuario;
+
+public class UsuarioDaoImpl extends GenericDaoImpl<Usuario, Integer> implements UsuarioDao{
+
+	public UsuarioDaoImpl(EntityManager em) {
+		super(em);
+	}
+
+	@Override
+	public List<Usuario> listar() {
+		TypedQuery<Usuario> query = em.createQuery("from Usuario", Usuario.class);
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Usuario> buscarPorEmail(String e) {
+		return em.createQuery("from Usuario u where lower(u.email) like lower(:e) order by c.nome", Usuario.class)
+				.setParameter("e", "%" + e + "%").getResultList();
+	}
+
+}

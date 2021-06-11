@@ -1,0 +1,13 @@
+package br.com.itProdigium.dao;
+
+import java.util.List;
+
+import br.com.itProdigium.entity.PontosTuristicos;
+
+public interface PontosTuristicosDao extends GenericDao<PontosTuristicos, Integer>{
+
+	List<PontosTuristicos> listar();
+	
+	List<PontosTuristicos> buscarPeloTipo(Tipo tipo);
+	
+}

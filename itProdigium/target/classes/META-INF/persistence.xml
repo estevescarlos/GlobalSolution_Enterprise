@@ -6,14 +6,14 @@
         <class>Model.Person</class>
 
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://servidor-prodigium-001.database.windows.net;DatabaseName=sqldb-gs-001"/>
-            <property name="javax.persistence.jdbc.user" value="adm-sqldb-prodigium"/>
-            <property name="javax.persistence.jdbc.password" value="@Fiap2021"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+			<property name="javax.persistence.jdbc.user" value="RM86282"/>
+			<property name="javax.persistence.jdbc.password" value="260199"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
 
         </properties>
     </persistence-unit>
