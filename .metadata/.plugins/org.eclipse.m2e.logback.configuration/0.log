@@ -1818,3 +1818,7 @@
 2021-06-10 22:44:10,629 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Carlos Esteves\Desktop\Global Solution 1o semestre de 2021\Enterprise\itProdigium\src\main\resources
 2021-06-10 22:44:10,630 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-06-10 22:44:10,631 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Carlos Esteves\Desktop\Global Solution 1o semestre de 2021\Enterprise\itProdigium\src\test\resources
+2021-06-10 22:47:36,241 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-06-10 22:47:36,241 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Carlos Esteves\Desktop\Global Solution 1o semestre de 2021\Enterprise\itProdigium\src\main\resources
+2021-06-10 22:47:36,242 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-06-10 22:47:36,243 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Carlos Esteves\Desktop\Global Solution 1o semestre de 2021\Enterprise\itProdigium\src\test\resources
